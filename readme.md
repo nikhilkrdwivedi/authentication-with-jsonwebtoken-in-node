@@ -22,6 +22,23 @@ $ npm start or yarn start
 let's take one .env file example[your path or token depends upon your choice] -
 - DB_CONNECT = "mongodb://localhost:27017/mydb"
 - TOKEN_SECRET = habdBYUCBNBNXBYQTHXBYUASVXUGQSJXBXN
+#### Routes:
+- localhost:3000/api/user/register
+    Body: {
+	"name":"Nikhil Kumar",
+	"email" : "nikhil@outlook.com",
+	"password":"125qs6"
+}
+- localhost:3000/api/user/login
+        {
+	"email" : "nikhil@outlook.com",
+	"password":"125qs6"
+}
+This will return JWT.
+- localhost:3000/api/posts 
+    Pass in headers "auth-token" - "Your JWT TOKEN which you get after successfully login"
+This will return one dummy post. If you pass wrong token, will return access denied.
+
 
 #### Thanks for checking my code, feel free to give your valuable suggestions.
 
